@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 function App() {
   const [name, setName] = useState('');
@@ -8,6 +8,10 @@ function App() {
   const btnClick = () => {
     alert(`hello ${name}`);
   }
+
+  useEffect(() => {
+    console.log(name);
+  }, [name]);
 
   return (
     <div className="App">
